@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function SkiActivity({ token }) {
+function SkiActivity() {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {

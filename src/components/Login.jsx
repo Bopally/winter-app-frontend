@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("student");
+  const navigate = useNavigate(); // redirect to the home page when login is successful
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,9 +20,10 @@ function Login({ onLogin }) {
       );
       onLogin(response.data.token);
       alert("Login successful!");
+      navigate("/", { state: { message: "Login successful!" } });
     } catch (error) {
       console.error("Login error", error);
-      alert("Invalid credentials, please try again");
+      alert("Invalid credentials, try again");
     }
   };
 
