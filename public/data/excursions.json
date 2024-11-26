@@ -1,0 +1,28 @@
+{
+  "excursionActivities": [
+    {
+      "name": "Snowy Forest Trail",
+      "description": "Immerse yourself in the serene beauty of snow-covered trees and tranquil landscapes.",
+      "level": "Beginner",
+      "duration": "2 hours",
+      "price": "€30 per person",
+      "highlights": [
+        "Guided tour with a local expert",
+        "Hot chocolate break at a scenic viewpoint",
+        "Snowshoe rental included"
+      ]
+    },
+    {
+      "name": "Alpine Ridge Adventure",
+      "description": "For those seeking a more challenging experience, the Alpine Ridge Adventure offers a thrilling hike along the ridges of the Serenity Mountains.",
+      "level": "Advanced",
+      "duration": "4 hours",
+      "price": "€60 per person",
+      "highlights": [
+        "Professional guide with mountaineering experience",
+        "Includes safety equipment and gear",
+        "Stop at an alpine hut for a warm meal"
+      ]
+    }
+  ]
+}
