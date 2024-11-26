@@ -1,26 +1,31 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 function SkiActivity() {
   const [courses, setCourses] = useState([]);
 
-  useEffect(() => {
+  // Fonction pour récupérer les cours depuis l'API
+  const fetchCourses = () => {
     axios
       .get("http://localhost:5000/courses")
       .then((response) => {
+        console.log("Courses fetched:", response.data);
         setCourses(response.data);
       })
       .catch((error) => {
         console.error("There was an error fetching the courses!", error);
       });
+  };
+
+  useEffect(() => {
+    fetchCourses(); // Appelle fetchCourses lors du montage du composant
   }, []);
 
   return (
-    <div>
-      <h2>Ski Activities</h2>
-      <ul>
+    <div className="ski-activity">
+      <div className="card-container">
         {courses.map((course) => (
-          <li key={course._id}>
+          <div key={course._id} className="course-card">
             <h3>{course.title}</h3>
             <p>{course.description}</p>
             <p>
@@ -35,9 +40,9 @@ function SkiActivity() {
             <p>
               <strong>Level:</strong> {course.level}
             </p>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,30 @@
+import excursionData from "../../public/data/excursions.json";
+
 function ExcursionActivity() {
   return (
     <div>
-      <h2>Excursion Activities</h2>
-      <p>Explore the beautiful mountain trails ...</p>
+      <div className="card-container">
+        {excursionData.excursionActivities.map((activity, index) => (
+          <div key={index} className="card">
+            <h3>{activity.name}</h3>
+            <p>{activity.description}</p>
+            <p>
+              <strong>Level:</strong> {activity.level}
+            </p>
+            <p>
+              <strong>Duration:</strong> {activity.duration}
+            </p>
+            <p>
+              <strong>Price:</strong> {activity.price}
+            </p>
+            <ul>
+              {activity.highlights.map((highlight, i) => (
+                <li key={i}>{highlight}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -3,15 +3,36 @@ import ExcursionActivity from "../components/ExcursionActivity";
 import ThermalBathsActivity from "../components/ThermalBathsActivity";
 import KidsActivities from "../components/KidsActivities";
 
+import "../styles/Activities.css";
+
 function Activities() {
   return (
-    <div>
+    <div className="container">
       <h1>ACTIVITIES</h1>
 
-      <SkiActivity />
-      <ExcursionActivity />
-      <ThermalBathsActivity />
-      <KidsActivities />
+      <div className="activity-section ski-activity">
+        <h2 className="activity-title">Ski Activities</h2>
+        <SkiActivity />
+      </div>
+
+      <div className="activity-section">
+        <h2 className="activity-title">Excursion Activity</h2>
+        <ExcursionActivity />
+      </div>
+
+      <div className="activity-section">
+        <h2 className="activity-title">Thermal Baths Activity</h2>
+        <div className="card">
+          <ThermalBathsActivity />
+        </div>
+      </div>
+
+      <div className="activity-section">
+        <h2 className="activity-title">Kids Activities</h2>
+        <div className="card">
+          <KidsActivities />
+        </div>
+      </div>
     </div>
   );
 }
