@@ -1,0 +1,30 @@
+.about-us-page {
+  padding: 40px;
+  font-family: "Georgia", serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.intro {
+  font-size: 30px;
+}
+
+.intro,
+.our-story,
+.experience {
+  margin-bottom: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+strong {
+  color: #d2a41d;
+}
