@@ -1,0 +1,40 @@
+/* Container for the login page */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.freepik.com/free-photo/minimal-cabin-mountains_23-2151845100.jpg?t=st=1732644073~exp=1732647673~hmac=ebf9cfff999f1086ab9ba04604920f996df4313bbf39e9828d8580fea8c3636f&w=996");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+/* Form Container */
+form {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 80%;
+  max-width: 500px;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Form Elements */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.6);
+  resize: none;
+}

@@ -11,7 +11,6 @@ function LoginPage() {
 
   return (
     <div>
-      <h1>Login Page</h1>
       <Login onLogin={handleLogin} />
       {token && <p>Login successful!</p>}
     </div>
