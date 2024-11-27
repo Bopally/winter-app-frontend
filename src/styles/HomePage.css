@@ -1,63 +1,14 @@
-/* Global Styles */
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #2c3e50;
-}
-
-h1 {
+/* Styles for home page title*/
+.homepage-title {
   text-align: center;
   color: #fff;
   margin: 0;
   padding: 100px 0;
   font-size: 2.5rem;
-  background-image: url("https://img.freepik.com/free-photo/wide-shot-cable-cart-snowy-mountain_181624-11037.jpg?t=st=1732557090~exp=1732560690~hmac=75f972daed6d2dfbe4daec1416d7f037a7b02b566e0b10037796f331a4083fff&w=2000");
+  background-image: url("https://img.freepik.com/free-photo/photorealistic-wooden-house-interior-with-timber-decor-furnishings_23-2151263547.jpg?t=st=1732643265~exp=1732646865~hmac=720d42775c86015e3b9e0ca97de62e04008de87d06dc0ceacf63decd37588637&w=2000");
   background-size: cover;
   background-position: center;
   position: relative;
-}
-
-/* Navigation and Footer Styles */
-nav,
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #2c3e50;
-  padding: 10px 20px;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-nav a,
-footer a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-footer a:hover {
-  color: #2980b9;
-}
-
-/* Button Styles */
-button,
-.dropbtn {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover,
-.dropbtn:hover {
-  background-color: #2980b9;
 }
 
 /* Main Layout */
@@ -91,7 +42,7 @@ main {
   align-items: center;
   background-size: cover;
   background-position: center;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .accommodation {
@@ -104,37 +55,4 @@ main {
 
 .gastronomy {
   background-image: url("https://img.freepik.com/free-photo/delicious-christmas-finger-food-arrangement_23-2151101862.jpg?t=st=1732556907~exp=1732560507~hmac=6a5038878ca707c248cdb17b29c78e3f58ba2458b1a8166157910de71254b222&w=1380");
-}
-
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 5px;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
