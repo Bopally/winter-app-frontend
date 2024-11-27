@@ -1,0 +1,100 @@
+/* Global Styles */
+.gastronomy-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  background-color: #f8f8f8;
+  font-family: "Georgia", serif;
+}
+/* Header Styles */
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 60px;
+}
+
+/* Card Styles for Restaurants and Wines */
+.restaurant,
+.wine-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  padding: 30px;
+  border: 2px solid #c59809;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant:hover,
+.wine-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 25px #d2a41d;
+}
+
+/* Image Styles */
+.restaurant-image,
+.wine-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Text Styles */
+h3 {
+  margin-top: 0;
+  color: #444;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #d2a41d;
+}
+
+p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Menu Item Styles */
+.menu-item {
+  margin-top: 20px;
+  padding: 20px;
+  border-top: 1px solid #d2a41d;
+}
+
+.menu-item h4 {
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+.menu-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item li {
+  margin-bottom: 5px;
+  color: #777;
+  font-size: 1rem;
+}
+
+.menu-item em {
+  display: block;
+  margin-top: 10px;
+  color: #888;
+  font-style: italic;
+  font-size: 0.9rem;
+}
