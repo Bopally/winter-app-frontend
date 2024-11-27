@@ -1,50 +1,13 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import HeaderFooterLayout from "../components/HeaderFooterLayout";
 import "../styles/HomePage.css";
 
 function HomePage() {
-  const [token, setToken] = useState(localStorage.getItem("authToken") || null);
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    setToken(null);
-    localStorage.removeItem("authToken");
-    navigate("/");
-  };
-
-  const handleProfileClick = () => {
-    navigate("/account");
-  };
-
   return (
-    <div>
-      <nav>
-        <p>
-          <Link to="/about">ABOUT</Link>
-        </p>
-        <div className="dropdown">
-          <button className="dropbtn">
-            {token ? "My Account" : "Connexion"}
-          </button>
-          <div className="dropdown-content">
-            {!token ? (
-              <>
-                <Link to="/login">Sign Up</Link>
-                <Link to="/create-account">Create an Account</Link>
-              </>
-            ) : (
-              <>
-                <button onClick={handleProfileClick}>My Account</button>
-                <button onClick={handleLogout}>Logout</button>
-              </>
-            )}
-          </div>
-        </div>
-      </nav>
+    <HeaderFooterLayout>
       <header>
-        <h1>Serenity Mountain</h1>
+        <h1 className="homepage-title">Serenity Mountain</h1>
       </header>
-
       <main>
         <div className="row">
           <div className="column main-link accommodation">
@@ -58,7 +21,7 @@ function HomePage() {
           <Link to="/gastronomy">GASTRONOMY</Link>
         </div>
       </main>
-    </div>
+    </HeaderFooterLayout>
   );
 }
 

@@ -1,13 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
-import CreateAccount from "./pages/CreateAccount";
+import CreateAccount from "./pages/CreateAccountPage";
 import Account from "./pages/AccountPage";
 import About from "./pages/AboutPage";
 import Accommodation from "./pages/Accommodation";
 import Activities from "./pages/Activities";
 import Gastronomy from "./pages/Gastronomy";
-import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
           <Route path="/activities" element={<Activities />} />
           <Route path="/gastronomy" element={<Gastronomy />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );
