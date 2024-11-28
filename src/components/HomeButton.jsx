@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import homeIconForm from "../styles/Images/HomeButtonForm.png";
+import homeIcon from "../styles/Images/HomeButton.png";
 
 function HomeButton() {
   const navigate = useNavigate();
@@ -11,11 +11,11 @@ function HomeButton() {
 
   return (
     <img
-      src={homeIconForm}
+      src={homeIcon}
       alt="Home"
       title="Go back to HomePage"
       onClick={handleClick}
-      className="home-icon-form"
+      className="home-icon"
       style={{ cursor: "pointer", width: "50px", height: "50px" }}
     />
   );
