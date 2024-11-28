@@ -3,7 +3,7 @@
     {
       "name": "Serenity Peaks Menu",
       "description": "Nestled amidst the serene landscapes of Serenity Mountains, whether you are staying at our luxurious resort or just passing through, embark on a truly gourmet journey at Serenity Peaks, our premier dining destination. From the moment you step inside, you're enveloped in an atmosphere of elegance and charm that seamlessly blends tradition with modern sophistication. Here, every dish is a testament to culinary artistry, crafted with the finest cheeses and locally sourced ingredients. It's more than dining; it's an experiencewhether you're sharing it with family, friends, or that special someone.",
-      "image": "https://img.freepik.com/free-photo/cheese-platter-wine-presented-front-fire_157027-3510.jpg?t=st=1732730644~exp=1732734244~hmac=f87432bbf670b8ac95af1965b585b3ea3f9fe0834e3b0ae0d594a6419a48d862&w=2000",
+      "image": "https://images.unsplash.com/photo-1474221550179-c492fb337327?q=80&w=2980&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "menu": [
         {
           "name": "Culinary Experience",
@@ -54,9 +54,9 @@
   ],
   "wines": [
     {
-      "name": "Valley Reserve Chardonnay",
+      "name": "Bordeaux Valley Reserve",
       "description": "Our wine cellar boasts a curated selection of premium wines, each chosen for its exceptional quality and ability to complement our gourmet dishes. Whether you prefer a robust red or a crisp white, our collection offers the perfect pairing to enhance the flavors of your meal and elevate your dining experience to new heights.",
-      "image": "https://img.freepik.com/free-photo/luxury-wine-bottle-rustic-wooden-table-generated-by-ai_188544-34760.jpg?t=st=1732730828~exp=1732734428~hmac=4a41b37a8405a2eacb5dc98d7de7c2597dc8881a095aa73f94c813a68226f596&w=2000"
+      "image": "https://images.unsplash.com/photo-1470158499416-75be9aa0c4db?q=80&w=2125&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
 }
