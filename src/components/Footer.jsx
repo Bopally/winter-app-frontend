@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
-import githubIcon from "../styles/images/github-icon.png";
-import linkedinIcon from "../styles/images/linkedin-icon.png";
+import githubIcon from "../styles/Images/Github-icon.png";
+import linkedinIcon from "../styles/Images/Linkedin-icon.png";
 
 import "../styles/HomePage.css";
 import "../styles/Footer.css";
