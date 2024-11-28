@@ -29,13 +29,6 @@ function Account() {
     }
   }, [navigate]);
 
-  // Logout functionality
-  const handleLogout = () => {
-    // Remove the token from localStorage and redirect to the home page
-    localStorage.removeItem("authToken");
-    navigate("/");
-  };
-
   return (
     <HeaderFooterLayout title="My Account">
       <div>
@@ -43,7 +36,6 @@ function Account() {
         {token && role === "SkiInstructor" && (
           <InstructorDashboard token={token} />
         )}
-        <button onClick={handleLogout}>Logout</button>
       </div>
     </HeaderFooterLayout>
   );
