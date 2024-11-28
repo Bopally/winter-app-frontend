@@ -12,19 +12,17 @@ import Gastronomy from "./pages/Gastronomy";
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/account" element={<Account />} />
-          <Route path="/create-account" element={<CreateAccount />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/accommodation" element={<Accommodation />} />
-          <Route path="/activities" element={<Activities />} />
-          <Route path="/gastronomy" element={<Gastronomy />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/accommodation" element={<Accommodation />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/gastronomy" element={<Gastronomy />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </Router>
   );
 }
