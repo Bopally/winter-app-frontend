@@ -4,6 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import CreateAccount from "./pages/CreateAccountPage";
 import Account from "./pages/AccountPage";
 import About from "./pages/AboutPage";
+import NotFound from "./pages/NotFoundPage";
 import Accommodation from "./pages/Accommodation";
 import Activities from "./pages/Activities";
 import Gastronomy from "./pages/Gastronomy";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/gastronomy" element={<Gastronomy />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
