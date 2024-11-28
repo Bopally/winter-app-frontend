@@ -4,10 +4,7 @@ import "../styles/HomePage.css";
 
 function HomePage() {
   return (
-    <HeaderFooterLayout>
-      <header>
-        <h1 className="homepage-title">Serenity Mountain</h1>
-      </header>
+    <HeaderFooterLayout title="Serenity Mountain">
       <main>
         <div className="row">
           <div className="column main-link accommodation">

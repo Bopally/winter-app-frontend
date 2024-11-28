@@ -8,10 +8,8 @@ import "../styles/Activities.css";
 
 function Activities() {
   return (
-    <HeaderFooterLayout>
+    <HeaderFooterLayout title="Activities">
       <div className="container">
-        <h1>ACTIVITIES</h1>
-
         <div className="activity-section ski-activity">
           <h2 className="activity-title">Ski Activities</h2>
           <SkiActivity />

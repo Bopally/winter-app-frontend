@@ -8,7 +8,7 @@ function Gastronomy() {
   const { description } = gastronomyData.restaurants[0];
 
   return (
-    <HeaderFooterLayout>
+    <HeaderFooterLayout title="Gastronomy">
       <div className="gastronomy-page">
         <h2>Serenity Peaks</h2>
         <p>{description}</p>
