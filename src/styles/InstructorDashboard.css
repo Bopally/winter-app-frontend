@@ -1,0 +1,17 @@
+.instructor-dashboard .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.instructor-dashboard .course-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #333;
+  flex: 1 1 calc(30% - 20px);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
