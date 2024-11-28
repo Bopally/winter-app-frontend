@@ -14,15 +14,9 @@ main {
 }
 
 /* Link Styles */
-.main-link a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.main-link {
+a.main-link {
   height: 250px;
   text-align: center;
-  color: #fff;
   font-size: 1.5rem;
   display: flex;
   justify-content: center;
@@ -30,16 +24,24 @@ main {
   background-size: cover;
   background-position: center;
   transition: 0.3s ease;
+
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+}
+
+a.main-link:visited {
+  color: #fff;
 }
 
 .accommodation {
-  background-image: url("https://img.freepik.com/free-photo/luxurious-villa-with-modern-architectural-design_23-2151694106.jpg?t=st=1732560126~exp=1732563726~hmac=c9abfb97c98ee99931b1b65dad5b7d75f4a44cbbaed0e5999d9a61a6389846bc&w=2000");
+  background-image: url("https://images.unsplash.com/photo-1645535490445-8b1ed504b70e?q=80&w=3165&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 .activities {
-  background-image: url("https://img.freepik.com/free-photo/two-men-skiing-down-mountain-winter-generated-by-ai_188544-32978.jpg?t=st=1732556758~exp=1732560358~hmac=5d62367168b817985269eb2874f52e604db575f250dc79547fc9473d9c879dff&w=2000");
+  background-image: url("https://images.unsplash.com/photo-1703359328488-791214a225fa?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }
 
 .gastronomy {
-  background-image: url("https://img.freepik.com/free-photo/delicious-christmas-finger-food-arrangement_23-2151101862.jpg?t=st=1732556907~exp=1732560507~hmac=6a5038878ca707c248cdb17b29c78e3f58ba2458b1a8166157910de71254b222&w=1380");
+  background-image: url("https://images.unsplash.com/photo-1519749309470-4be889b4e4e2?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 }

@@ -23,7 +23,6 @@ nav {
   align-items: center;
   padding: 10px 20px;
   color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -36,7 +35,7 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 header {
-  background-image: url("https://img.freepik.com/free-photo/niseko-city-view-hokkaido-japan_1339-7016.jpg?t=st=1732743930~exp=1732747530~hmac=0f51266444eb8fb9971d502226c263cf2c8a194fe7ea29b20d9d8f5f6499e879&w=1800");
+  background-image: url("https://images.unsplash.com/photo-1515767160065-1733c5eb680f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   position: relative;
