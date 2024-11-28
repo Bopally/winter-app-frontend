@@ -1,16 +1,3 @@
-/* Styles for home page title*/
-.homepage-title {
-  text-align: center;
-  color: #fff;
-  margin: 0;
-  padding: 100px 0;
-  font-size: 2.5rem;
-  background-image: url("https://img.freepik.com/free-photo/photorealistic-wooden-house-interior-with-timber-decor-furnishings_23-2151263547.jpg?t=st=1732643265~exp=1732646865~hmac=720d42775c86015e3b9e0ca97de62e04008de87d06dc0ceacf63decd37588637&w=2000");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
 /* Main Layout */
 main {
   display: flex;
