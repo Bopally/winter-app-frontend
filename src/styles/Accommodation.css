@@ -54,6 +54,8 @@ h2 {
 
 .room-descriptions {
   margin-top: 40px;
+  max-width: 960px;
+  margin: auto;
 }
 
 .room-description {
