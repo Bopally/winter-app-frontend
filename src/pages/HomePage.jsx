@@ -7,16 +7,16 @@ function HomePage() {
     <HeaderFooterLayout title="Serenity Mountain">
       <main>
         <div className="row">
-          <div className="column main-link accommodation">
-            <Link to="/accommodation">ACCOMMODATION</Link>
-          </div>
-          <div className="column main-link activities">
-            <Link to="/activities">ACTIVITIES</Link>
-          </div>
+          <Link to="/accommodation" className="column main-link accommodation">
+            <div>ACCOMMODATION</div>
+          </Link>
+          <Link to="/activities" className="column main-link activities">
+            <div>ACTIVITIES</div>
+          </Link>
         </div>
-        <div className="full-width main-link gastronomy">
-          <Link to="/gastronomy">GASTRONOMY</Link>
-        </div>
+        <Link to="/gastronomy" className="full-width main-link gastronomy">
+          <div>GASTRONOMY</div>
+        </Link>
       </main>
     </HeaderFooterLayout>
   );
