@@ -3,8 +3,8 @@ import axios from "axios";
 
 function SkiActivity() {
   const [courses, setCourses] = useState([]);
+  const [visibleInstructor, setVisibleInstructor] = useState(null);
 
-  // Fonction pour récupérer les cours depuis l'API
   const fetchCourses = () => {
     axios
       .get("http://localhost:5000/courses")
@@ -18,8 +18,14 @@ function SkiActivity() {
   };
 
   useEffect(() => {
-    fetchCourses(); // Appelle fetchCourses lors du montage du composant
+    fetchCourses();
   }, []);
+
+  const toggleInstructorInfo = (instructorId) => {
+    setVisibleInstructor(
+      visibleInstructor === instructorId ? null : instructorId
+    );
+  };
 
   return (
     <div className="ski-activity">
@@ -29,7 +35,13 @@ function SkiActivity() {
             <h3>{course.title}</h3>
             <p>{course.description}</p>
             <p>
-              <strong>Instructor:</strong> {course.instructor.name}
+              <strong>Instructor:</strong>{" "}
+              <span
+                className="instructor-name"
+                onClick={() => toggleInstructorInfo(course.instructor._id)}
+              >
+                {course.instructor.name}
+              </span>
             </p>
             <p>
               <strong>Price:</strong> €{course.price}
@@ -40,6 +52,19 @@ function SkiActivity() {
             <p>
               <strong>Level:</strong> {course.level}
             </p>
+
+            {visibleInstructor === course.instructor._id && (
+              <div className="instructor-details">
+                <img
+                  src={course.instructor.picture}
+                  alt={course.instructor.name}
+                  className="instructor-image"
+                />
+                <p>
+                  <strong>Description:</strong> {course.instructor.description}
+                </p>
+              </div>
+            )}
           </div>
         ))}
       </div>

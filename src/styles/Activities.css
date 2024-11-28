@@ -32,6 +32,32 @@
   box-sizing: border-box;
 }
 
+/* Instructor card */
+
+.instructor-name {
+  color: #333;
+  cursor: pointer;
+  border-bottom: 2px solid #d2a41d;
+  padding-bottom: 2px;
+}
+.instructor-details {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instructor-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
 /* Activity Sections */
 .activity-section {
   display: flex;
