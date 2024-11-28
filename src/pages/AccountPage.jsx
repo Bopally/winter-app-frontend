@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import InstructorDashboard from "../components/InstructorDashboard";
+import HeaderFooterLayout from "../components/HeaderFooterLayout";
 
 function Account() {
   // State to store the authentication token
@@ -36,18 +37,15 @@ function Account() {
   };
 
   return (
-    <div>
-      <h1>Account Page</h1>
-      <p>
-        Welcome to your account. Here you can manage your personal information
-        and settings.
-      </p>
-      {/* Render the Instructor Dashboard only if the user is an instructor */}
-      {token && role === "SkiInstructor" && (
-        <InstructorDashboard token={token} />
-      )}
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+    <HeaderFooterLayout title="My Account">
+      <div>
+        {/* Render the Instructor Dashboard only if the user is an instructor */}
+        {token && role === "SkiInstructor" && (
+          <InstructorDashboard token={token} />
+        )}
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+    </HeaderFooterLayout>
   );
 }
 
