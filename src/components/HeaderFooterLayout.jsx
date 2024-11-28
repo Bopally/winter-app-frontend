@@ -3,7 +3,7 @@ import Footer from "./Footer";
 
 function HeaderFooterLayout({ children, title }) {
   return (
-    <div>
+    <div className="HeaderFooterLayout">
       <Header title={title} />
       {children}
       <Footer />

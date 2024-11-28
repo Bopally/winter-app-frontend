@@ -12,10 +12,6 @@ function Header({ title }) {
     navigate("/");
   };
 
-  const handleProfileClick = () => {
-    navigate("/account");
-  };
-
   return (
     <header>
       <nav>
@@ -32,7 +28,7 @@ function Header({ title }) {
               </>
             ) : (
               <>
-                <button onClick={handleProfileClick}>My Account</button>
+                <Link to="/account">My Account</Link>
                 <button onClick={handleLogout}>Logout</button>
               </>
             )}
