@@ -157,25 +157,23 @@ function InstructorDashboard({ token }) {
       <h2 className="activity-title">Instructor Dashboard</h2>
       <h3 className="activity-title">Your Courses</h3>
       <div className="card-container">
-        <ul>
-          {courses.map((course) => (
-            <li key={course._id} className="course-card">
-              <h4>{course.title}</h4>
-              <p>{course.description}</p>
-              <p>
-                <strong>Price:</strong> €{course.price}
-              </p>
-              <p>
-                <strong>Duration:</strong> {course.duration} hours
-              </p>
-              <p>
-                <strong>Level:</strong> {course.level}
-              </p>
-              <button onClick={() => handleEdit(course)}>Edit</button>
-              <button onClick={() => handleDelete(course._id)}>Delete</button>
-            </li>
-          ))}
-        </ul>
+        {courses.map((course) => (
+          <div key={course._id} className="course-card">
+            <h4>{course.title}</h4>
+            <p>{course.description}</p>
+            <p>
+              <strong>Price:</strong> €{course.price}
+            </p>
+            <p>
+              <strong>Duration:</strong> {course.duration} hours
+            </p>
+            <p>
+              <strong>Level:</strong> {course.level}
+            </p>
+            <button onClick={() => handleEdit(course)}>Edit</button>
+            <button onClick={() => handleDelete(course._id)}>Delete</button>
+          </div>
+        ))}
       </div>
       <h3>{editingCourse ? "Edit Course" : "Create New Course"}</h3>
       <form onSubmit={editingCourse ? handleFormSubmit : handleCreate}>
@@ -221,9 +219,27 @@ function InstructorDashboard({ token }) {
           <option value="intermediate">Intermediate</option>
           <option value="advanced">Advanced</option>
         </select>
-        <button type="submit">
-          {editingCourse ? "Save Changes" : "Create Course"}
-        </button>
+        <div className="buttons-container">
+          <button type="submit">
+            {editingCourse ? "Save Changes" : "Create Course"}
+          </button>
+          {editingCourse && (
+            <button
+              onClick={() => {
+                setEditingCourse(null);
+                setFormData({
+                  title: "",
+                  description: "",
+                  duration: "",
+                  price: "",
+                  level: "beginner",
+                });
+              }}
+            >
+              Cancel edition
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );
