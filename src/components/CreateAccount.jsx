@@ -26,8 +26,13 @@ function CreateAccount() {
 
       console.log("Data being sent:", data);
 
+      // const response = await axios.post(
+      // `http://localhost:5000${endpoint}`,
+      // data
+      // );
+
       const response = await axios.post(
-        `http://localhost:5000${endpoint}`,
+        `${import.meta.env.VITE_API_URL}${endpoint}`,
         data
       );
       alert("Account created successfully!");

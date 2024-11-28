@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "../styles/InstructorDashboard.css";
 
 function InstructorDashboard({ token }) {
   const [courses, setCourses] = useState([]);
@@ -17,9 +18,12 @@ function InstructorDashboard({ token }) {
       if (token) {
         const instructorId = getInstructorIdFromToken(token);
         try {
-          const response = await axios.get("http://localhost:5000/courses", {
-            headers: { Authorization: `Bearer ${token}` },
-          });
+          const response = await axios.get(
+            `${import.meta.env.VITE_API_URL}/courses`,
+            {
+              headers: { Authorization: `Bearer ${token}` },
+            }
+          );
           const instructorCourses = response.data.filter(
             (course) => course.instructor._id === instructorId
           );
@@ -136,29 +140,30 @@ function InstructorDashboard({ token }) {
   };
 
   return (
-    <div>
-      <h2>Instructor Dashboard</h2>
-      <h3>Your Courses</h3>
-      <ul>
-        {courses.map((course) => (
-          <li key={course._id}>
-            <h4>{course.title}</h4>
-            <p>{course.description}</p>
-            <p>
-              <strong>Price:</strong> €{course.price}
-            </p>
-            <p>
-              <strong>Duration:</strong> {course.duration} hours
-            </p>
-            <p>
-              <strong>Level:</strong> {course.level}
-            </p>
-            <button onClick={() => handleEdit(course)}>Edit</button>
-            <button onClick={() => handleDelete(course._id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
-
+    <div className="instructor-dashboard container">
+      <h2 className="activity-title">Instructor Dashboard</h2>
+      <h3 className="activity-title">Your Courses</h3>
+      <div className="card-container">
+        <ul>
+          {courses.map((course) => (
+            <li key={course._id} className="course-card">
+              <h4>{course.title}</h4>
+              <p>{course.description}</p>
+              <p>
+                <strong>Price:</strong> €{course.price}
+              </p>
+              <p>
+                <strong>Duration:</strong> {course.duration} hours
+              </p>
+              <p>
+                <strong>Level:</strong> {course.level}
+              </p>
+              <button onClick={() => handleEdit(course)}>Edit</button>
+              <button onClick={() => handleDelete(course._id)}>Delete</button>
+            </li>
+          ))}
+        </ul>
+      </div>
       <h3>{editingCourse ? "Edit Course" : "Create New Course"}</h3>
       <form onSubmit={editingCourse ? handleFormSubmit : handleCreate}>
         <label>Title:</label>

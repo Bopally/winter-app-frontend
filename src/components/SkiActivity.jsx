@@ -6,8 +6,14 @@ function SkiActivity() {
   const [visibleInstructor, setVisibleInstructor] = useState(null);
 
   const fetchCourses = () => {
+    // axios
+    //   .get("http://localhost:5000/courses")
+    //   .then((response) => {
+    //     console.log("Courses fetched:", response.data);
+    //     setCourses(response.data);
+    //   })
     axios
-      .get("http://localhost:5000/courses")
+      .get(`${import.meta.env.VITE_API_URL}/courses`)
       .then((response) => {
         console.log("Courses fetched:", response.data);
         setCourses(response.data);
