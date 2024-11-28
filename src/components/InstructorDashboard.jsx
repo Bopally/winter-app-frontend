@@ -69,7 +69,8 @@ function InstructorDashboard({ token }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/courses",
+        // "http://localhost:5000/courses",
+        `${import.meta.env.VITE_API_URL}/courses`,
         courseData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -105,10 +106,21 @@ function InstructorDashboard({ token }) {
   // Function to handle course deletion
 
   const handleDelete = async (courseId) => {
+    // try {
+    //   await axios.delete(`http://localhost:5000/courses/${courseId}`, {
+    //     headers: { Authorization: `Bearer ${token}` },
+    //   });
+    //   setCourses(courses.filter((course) => course._id !== courseId));
+    // } catch (error) {
+    //   console.error("Error deleting course", error);
+    // }
     try {
-      await axios.delete(`http://localhost:5000/courses/${courseId}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await axios.delete(
+        `${import.meta.env.VITE_API_URL}/courses/${courseId}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
       setCourses(courses.filter((course) => course._id !== courseId));
     } catch (error) {
       console.error("Error deleting course", error);
@@ -121,7 +133,8 @@ function InstructorDashboard({ token }) {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:5000/courses/${editingCourse._id}`,
+        // `http://localhost:5000/courses/${editingCourse._id}`,
+        `${import.meta.env.VITE_API_URL}/courses/${editingCourse._id}`,
         formData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
