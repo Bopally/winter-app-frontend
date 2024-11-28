@@ -19,6 +19,7 @@ form {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   text-align: center;
+  margin: auto;
 }
 
 /* Form Elements */
@@ -37,4 +38,9 @@ form select {
   font-size: 16px;
   background-color: rgba(255, 255, 255, 0.6);
   resize: none;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
 }
