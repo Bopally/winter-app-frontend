@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import HomeButton from "../components/HomeButton";
 
 import "../styles/Form.css";
+import "../styles/Connectionmessage.css";
 
 function CreateAccount() {
   const [name, setName] = useState("");
@@ -13,6 +14,8 @@ function CreateAccount() {
   const [picture, setPicture] = useState("");
   const [description, setDescription] = useState("");
   const [experience, setExperience] = useState(0);
+  const [message, setMessage] = useState(null);
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -35,11 +38,15 @@ function CreateAccount() {
         `${import.meta.env.VITE_API_URL}${endpoint}`,
         data
       );
-      alert("Account created successfully!");
-      navigate("/login");
+      setMessage("Account created successfully!");
+      setError(null);
+      setTimeout(() => {
+        navigate("/login");
+      }, 3000);
     } catch (error) {
       console.error("Error creating account", error);
-      alert("There was an issue creating your account. Please try again.");
+      setError("There was an issue creating your account. Please try again.");
+      setMessage(null);
     }
   };
 
@@ -47,6 +54,9 @@ function CreateAccount() {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <h2>Create an Account</h2>
+
+        {message && <p className="success-message">{message}</p>}
+        {error && <p className="error-message">{error}</p>}
 
         <div>
           <input
