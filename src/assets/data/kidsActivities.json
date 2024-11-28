@@ -1,0 +1,17 @@
+{
+  "description": "Our resort offers a vibrant system of childcare with fun and exciting activities designed for kids of all ages. From creative arts and crafts to adventurous outdoor games, children will enjoy a safe and engaging environment while parents relax and unwind.",
+  "activities": [
+    {
+      "name": "Creative Arts and Crafts"
+    },
+    {
+      "name": "Nature Explorers"
+    },
+    {
+      "name": "Adventure Playground"
+    },
+    {
+      "name": "Puppet Shows"
+    }
+  ]
+}

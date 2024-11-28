@@ -1,4 +1,4 @@
-import hotelRoomsData from "../../public/data/hotelRooms.json";
+import hotelRoomsData from "../assets/data/hotelRooms.json";
 import HeaderFooterLayout from "../components/HeaderFooterLayout";
 import "../styles/Accommodation.css";
 

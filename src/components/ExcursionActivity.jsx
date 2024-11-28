@@ -1,4 +1,4 @@
-import excursionData from "../../public/data/excursions.json";
+import excursionData from "../assets/data/excursions.json";
 
 function ExcursionActivity() {
   return (

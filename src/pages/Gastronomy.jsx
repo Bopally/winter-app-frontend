@@ -1,7 +1,7 @@
 import HeaderFooterLayout from "../components/HeaderFooterLayout";
 import Restaurant from "../components/Restaurant";
 import WineMenu from "../components/WineMenu";
-import gastronomyData from "../../public/data/gastronomy.json";
+import gastronomyData from "../assets/data/gastronomy.json";
 import "../styles/Gastronomy.css";
 
 function Gastronomy() {

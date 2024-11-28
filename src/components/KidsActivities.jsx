@@ -1,26 +1,11 @@
-import { useState, useEffect } from "react";
+import kidsActivitiesData from "../assets/data/kidsActivities.json";
 
 function KidsActivities() {
-  const [kidsActivities, setkidsActivities] = useState(null);
-
-  useEffect(() => {
-    fetch("/data/kidsActivities.json")
-      .then((response) => response.json())
-      .then((data) => setkidsActivities(data.kidsActivities))
-      .catch((error) =>
-        console.error("Error fetching kids activities data:", error)
-      );
-  }, []);
-
-  if (!kidsActivities) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div>
-      <p>{kidsActivities.description}</p>
+      <p>{kidsActivitiesData.description}</p>
       <div className="activities-container-kids">
-        {kidsActivities.activities.map((activity, index) => (
+        {kidsActivitiesData.activities.map((activity, index) => (
           <div key={index} className="activity">
             <h3>{activity.name}</h3>
           </div>
